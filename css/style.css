@@ -1,0 +1,75 @@
+* {
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  background-image: linear-gradient(135deg, rgb(116, 121, 122), rgb(32, 57, 64));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+.box {
+  height: 100px;
+  width: 100px;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: rgb(45, 64, 70);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-image: url() ;
+}
+#status {
+  font-family: "Franklin Gothic Medium";
+  font-size: 30px;
+  padding: 20px;
+  font-weight: 500;
+}
+button {
+  width: 150px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: bolder ;
+  color: white;
+  background-color: red;
+  border-radius: 5px;
+  padding: 10px;
+}
+img{
+  height: 80px;
+  width: 80px;
+  filter: drop-shadow(0px 0px 5px  rgb(227, 220, 220));
+}
+
+.win{
+animation: winanimation ease-in-out 1000ms infinite;
+}
+@keyframes winanimation{
+  0%{background-color: rgba(253, 253, 253, 0.427);}
+  50%{background-color: #344648;}
+  100%{background-color: rgba(253, 253, 253, 0.427);}
+}
+@media (max-height:500px){
+  .box {
+    height: 80px;
+    width: 80px;
+  }
+  body {
+    height: 500px;
+  }
+  img{
+    height: 70px;
+    width: 70px;
+  }
+}
